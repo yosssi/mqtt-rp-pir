@@ -14,10 +14,10 @@ import (
 const (
 	defHost     = "test.mosquitto.org"
 	defPort     = "1883"
-	defClientID = "mosquitto-test-sub"
+	defClientID = "mqtt-rp-pir-sub"
 	defUsername = ""
 	defPassword = ""
-	defTopic    = "mosquitto-test"
+	defTopic    = "mqtt-rp-pir"
 	defQoS      = 0
 )
 
@@ -29,7 +29,7 @@ const checkInterval = 1000
 
 // handleはメッセージ受信時の処理を実施する。
 func handle(_ *mqtt.MqttClient, msg mqtt.Message) {
-	log.Printf("メッセージを受信しました。\nTopic: %s\nMessage: %s\n", msg.Topic(), msg.Payload())
+	log.Println(msg.Payload())
 }
 
 func main() {

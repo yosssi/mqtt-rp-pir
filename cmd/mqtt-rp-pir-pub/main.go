@@ -15,12 +15,11 @@ import (
 const (
 	defHost     = "test.mosquitto.org"
 	defPort     = "1883"
-	defClientID = "mosquitto-test-pub"
+	defClientID = "mqtt-rp-pir-pub"
 	defUsername = ""
 	defPassword = ""
-	defTopic    = "mosquitto-test"
+	defTopic    = "mqtt-rp-pir"
 	defQoS      = 0
-	defMsg      = "Hello MQTT"
 )
 
 // MQTTブローカ切断時の待ち時間(ms)
