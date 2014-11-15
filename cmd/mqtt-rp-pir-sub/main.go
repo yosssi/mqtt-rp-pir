@@ -29,7 +29,7 @@ const checkInterval = 1000
 
 // handleはメッセージ受信時の処理を実施する。
 func handle(_ *mqtt.MqttClient, msg mqtt.Message) {
-	log.Println(msg.Payload())
+	log.Println(string(msg.Payload()))
 }
 
 func main() {
